@@ -108,5 +108,44 @@
             </field>
         </record>
 
+        <record id="clv_mfile_view_kanban_state" model="ir.ui.view">
+            <field name="name">clv.mfile.kanban</field>
+            <field name="model">clv.mfile</field>
+            <field name="inherit_id" ref="clv_mfile.clv_mfile_view_kanban"/>
+            <field name="priority">12</field>
+            <field name="arch" type="xml">
+                <div name="kanban_details" position="replace">
+                    <div name="kanban_details" class="oe_kanban_details">
+                        <strong>
+                            <field name="name"/>
+                        </strong>
+                        <ul>
+                            <li t-if="record.alias.raw_value">
+                                <field name="alias"/>
+                            </li>
+                            <li t-if="record.code.raw_value">
+                                <field name="code"/>
+                            </li>
+                            <li t-if="record.path.raw_value">
+                                <field name="path"/>
+                            </li>
+                            <li t-if="record.reg_state.raw_value">
+                                <field name="reg_state"/>
+                            </li>
+                            <li t-if="record.state.raw_value">
+                                <field name="state"/>
+                            </li>
+                            <li t-if="record.category_names.raw_value">
+                                <field name="category_names"/>
+                            </li>
+                            <li t-if="record.global_tag_names.raw_value">
+                                <field name="global_tag_names"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </field>
+        </record>
+    
     </data>
 </odoo>
