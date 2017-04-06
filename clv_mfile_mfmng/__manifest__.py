@@ -32,6 +32,7 @@
     ],
     'data': [
         'views/mfile_code_view.xml',
+        'views/mfile_reg_state_view.xml',
         'data/mfile_seq_03.xml',
         'data/mfile_seq_04.xml',
         'data/mfile_seq_06.xml',
