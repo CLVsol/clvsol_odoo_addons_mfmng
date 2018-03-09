@@ -39,6 +39,7 @@
         'data/mfile_seq_06.xml',
         'data/mfile_seq_09.xml',
         'data/mfile_seq_10.xml',
+        'views/mfile_menu_view.xml',
     ],
     'demo': [],
     'test': [],
