@@ -16,6 +16,7 @@
     'data': [
         'views/base_menu_view.xml',
         'views/mfmng_menu_view.xml',
+        'views/external_sync_menu_view.xml',
         'data/annotation_seq.xml',
     ],
     'demo': [],
