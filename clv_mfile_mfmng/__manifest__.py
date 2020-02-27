@@ -23,6 +23,7 @@
         'data/mfile_seq_06.xml',
         'data/mfile_seq_09.xml',
         'data/mfile_seq_10.xml',
+        'wizard/mfile_mass_edit_view.xml',
         'views/mfile_menu_view.xml',
     ],
     'demo': [],
