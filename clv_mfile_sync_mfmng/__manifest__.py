@@ -16,6 +16,7 @@
     ],
     'data': [
         'data/mfile_category_sync.xml',
+        'data/mfile_marker_sync.xml',
         'data/mfile_format_sync.xml',
         'data/mfile_sync.xml',
     ],
