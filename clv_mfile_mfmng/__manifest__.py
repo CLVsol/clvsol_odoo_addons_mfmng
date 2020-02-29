@@ -12,6 +12,7 @@
     'website': 'https://github.com/CLVsol',
     'images': [],
     'depends': [
+        'clv_base_mfmng',
         'clv_mfile',
     ],
     'data': [
