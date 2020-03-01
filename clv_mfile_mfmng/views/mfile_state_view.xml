@@ -11,34 +11,50 @@
         <field name="priority" eval="8"/>
         <field name="arch" type="xml">
             <header name="header" position="inside">
+                <!--field name="state" widget="statusbar"
+                       statusbar_visible="new,getting,stored,checked,in_use,used,deleted"/-->
                 <field name="state" widget="statusbar"
-                       statusbar_visible="new,getting,stored,checked,in_use,used,deleted"/>
+                       statusbar_visible="stored,in_use,used"/>
                 <button name="action_new" type="object"
                         string="New"
+                        confirm="Change Register State to 'New'?"
+                        style="background-color:lightblue"
                         attrs="{'invisible':[('state','not in',['deleted'])]}"
                         groups="clv_mfile.group_manager"/>
                 <button name="action_getting" type="object"
                         string="Getting"
+                        confirm="Change Register State to 'Getting'?"
                         attrs="{'invisible':[('state','not in',['new'])]}"
+                        style="background-color:lightblue"
                         groups="clv_mfile.group_manager"/>
                 <button name="action_stored" type="object"
                         string="Stored"
+                        confirm="Change Register State to 'Stored'?"
+                        style="background-color:lightblue"
                         attrs="{'invisible':[('state','not in',['getting'])]}"
                         groups="clv_mfile.group_manager"/>
                 <button name="action_checked" type="object"
                         string="Checked"
+                        confirm="Change Register State to 'Checked'?"
+                        style="background-color:lightblue"
                         attrs="{'invisible':[('state','not in',['getting','stored'])]}"
                         groups="clv_mfile.group_manager"/>
                 <button name="action_in_use" type="object"
                         string="In Use"
+                        confirm="Change Register State to 'n Use'?"
+                        style="background-color:lightblue"
                         attrs="{'invisible':[('state','not in',['stored','checked','used'])]}"
                         groups="clv_mfile.group_manager"/>
                 <button name="action_used" type="object"
                         string="Used"
+                        confirm="Change Register State to 'Used'?"
+                        style="background-color:lightblue"
                         attrs="{'invisible':[('state','not in',['in_use'])]}"
                         groups="clv_mfile.group_manager"/>
                 <button name="action_deleted" type="object"
                         string="Deleted"
+                        confirm="Change Register State to 'Deleted'?"
+                        style="background-color:lightblue"
                         attrs="{'invisible':[('state','not in',['new','getting','stored','checked','in_use','used'])]}"
                         groups="clv_mfile.group_manager"/>
            </header>
