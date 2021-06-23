@@ -5,7 +5,7 @@
 {
     'name': 'Base Module (customizations for Media File Management Solution)',
     'summary': 'Base Module Module customizations for Media File Management Solution.',
-    'version': '12.0.4.0',
+    'version': '14.0.4.0',
     'author': 'Carlos Eduardo Vercelino - CLVsol',
     'category': 'CLVsol Solutions',
     'license': 'AGPL-3',
@@ -14,10 +14,7 @@
         'clv_base',
     ],
     'data': [
-        'views/base_menu_view.xml',
-        'views/mfmng_menu_view.xml',
-        'views/external_sync_menu_view.xml',
-        'data/annotation_seq.xml',
+        # 'data/annotation_seq.xml',
     ],
     'demo': [],
     'test': [],
