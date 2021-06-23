@@ -4,7 +4,7 @@
 
 import logging
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -39,7 +39,6 @@ class MediaFileMassEdit(models.TransientModel):
          ], string='State:', default=False, readonly=False, required=False
     )
 
-    @api.multi
     def do_mfile_mass_edit(self):
         self.ensure_one()
 

@@ -24,7 +24,6 @@ class Address(models.Model):
     def is_allowed_transition(self, old_state, new_state):
         return True
 
-    @api.multi
     def change_state(self, new_state):
         for mfile in self:
             if mfile.is_allowed_transition(mfile.state, new_state):
@@ -32,37 +31,30 @@ class Address(models.Model):
             else:
                 raise UserError('Status transition (' + mfile.state + ', ' + new_state + ') is not allowed!')
 
-    @api.multi
     def action_new(self):
         for mfile in self:
             mfile.change_state('new')
 
-    @api.multi
     def action_getting(self):
         for mfile in self:
             mfile.change_state('getting')
 
-    @api.multi
     def action_stored(self):
         for mfile in self:
             mfile.change_state('stored')
 
-    @api.multi
     def action_checked(self):
         for mfile in self:
             mfile.change_state('checked')
 
-    @api.multi
     def action_in_use(self):
         for mfile in self:
             mfile.change_state('in_use')
 
-    @api.multi
     def action_used(self):
         for mfile in self:
             mfile.change_state('used')
 
-    @api.multi
     def action_deleted(self):
         for mfile in self:
             mfile.change_state('deleted')

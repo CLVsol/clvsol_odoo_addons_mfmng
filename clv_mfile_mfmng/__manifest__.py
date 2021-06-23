@@ -5,7 +5,7 @@
 {
     'name': 'Media File (customizations for Media File Management Solution)',
     'summary': 'Media File Module customizations for Media File Management Solution.',
-    'version': '12.0.4.0',
+    'version': '14.0.4.0',
     'author': 'Carlos Eduardo Vercelino - CLVsol',
     'category': 'Generic Modules/Others',
     'license': 'AGPL-3',
@@ -25,7 +25,6 @@
         'data/mfile_seq_09.xml',
         'data/mfile_seq_10.xml',
         'wizard/mfile_mass_edit_view.xml',
-        'views/mfile_menu_view.xml',
     ],
     'demo': [],
     'test': [],

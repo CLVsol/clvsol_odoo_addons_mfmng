@@ -30,7 +30,6 @@ class MediaFile(models.Model):
         # return (old_reg_state, new_reg_state) in allowed
         return True
 
-    @api.multi
     def change_reg_state(self, new_reg_state):
         for mfile in self:
             if mfile.is_allowed_transition_reg_state(mfile.reg_state, new_reg_state):
@@ -38,22 +37,18 @@ class MediaFile(models.Model):
             else:
                 raise UserError('Status transition (' + mfile.reg_state + ', ' + new_reg_state + ') is not allowed!')
 
-    @api.multi
     def action_draft(self):
         for mfile in self:
             mfile.change_reg_state('draft')
 
-    @api.multi
     def action_revised(self):
         for mfile in self:
             mfile.change_reg_state('revised')
 
-    @api.multi
     def action_done(self):
         for mfile in self:
             mfile.change_reg_state('done')
 
-    @api.multi
     def action_cancel(self):
         for mfile in self:
             mfile.change_reg_state('canceled')

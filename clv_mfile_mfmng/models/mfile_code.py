@@ -16,13 +16,14 @@ class MediaFile(models.Model):
     code_sequence_09 = fields.Char(default='clv.mfile.code_09')
     code_sequence_10 = fields.Char(default='clv.mfile.code_10')
 
-    @api.one
     def _compute_path_str(self):
-        if self.alias:
-            if self.code:
-                self.path = self.alias + '_' + self.code + '_'
+        for record in self:
+
+            if record.alias:
+                if record.code:
+                    record.path = record.alias + '_' + record.code + '_'
+                else:
+                    record.path = record.alias
             else:
-                self.path = self.alias
-        else:
-            if self.code:
-                self.path = '_' + self.code + '_'
+                if record.code:
+                    record.path = '_' + record.code + '_'
