@@ -132,11 +132,13 @@
         <field name="inherit_id" ref="clv_mfile.clv_mfile_view_kanban"/>
         <field name="priority">11</field>
         <field name="arch" type="xml">
-            <ul name="kanban_ul" position="inside">
-                <ul name="kanban_ul">
-                    <li t-if="record.state.raw_value"><field name="state"/></li>
-               </ul>
-            </ul>
+            <us name="kanban_us" position="inside">
+                <strong>
+                    <span style="font-size:12px; color:maroon !important">
+                        <li t-if="record.state.raw_value"><field name="state"/></li>
+                    </span>
+                </strong>
+            </us>
         </field>
     </record>
     
